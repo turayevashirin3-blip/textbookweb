@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Project</title>
+<meta name="description" content="One clear sentence about what your project does.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f6f8;--ink:#12182b;--muted:#5b6377;--accent:#2b59ff;--panel:#e9ecf3}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1420;--ink:#eef0f6;--muted:#9aa3b8;--accent:#7f9bff;--panel:#1a2133}}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+.logo{font-weight:800;font-size:1.2rem;text-decoration:none}
+nav a{margin-left:24px;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{padding:96px 0 80px}
+h1{font-size:clamp(2.6rem,7vw,5.2rem);line-height:1.02;font-weight:800;letter-spacing:-.03em;max-width:14ch}
+.hero p{margin-top:24px;font-size:1.2rem;color:var(--muted);max-width:52ch}
+.btns{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:600;background:var(--accent);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--panel)}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;padding:56px 0;border-top:2px solid var(--panel)}
+.features h2{font-size:1.25rem;margin-bottom:8px}
+.features p{color:var(--muted)}
+.cta{background:var(--panel);border-radius:28px;padding:56px 32px;margin:24px 0 72px}
+.cta h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.02em;max-width:20ch}
+.cta .btns{margin-top:24px}
+footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">YourProject</a>
+    <nav><a href="#features">Features</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Say what you do in one line.</h1>
+      <p>A short, plain sentence explaining who this is for and what they get. Replace this with your real pitch.</p>
+      <div class="btns">
+        <a class="btn" href="#contact">Get started</a>
+        <a class="btn ghost" href="#features">See how it works</a>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div><h2>First benefit</h2><p>Describe the problem this solves in a sentence or two.</p></div>
+      <div><h2>Second benefit</h2><p>Describe what makes it easier or faster than the alternative.</p></div>
+      <div><h2>Third benefit</h2><p>Describe the result people can expect.</p></div>
+    </section>
+
+    <section class="cta" id="contact">
+      <h2>Ready to try it?</h2>
+      <div class="btns"><a class="btn" href="mailto:you@example.com">Email us</a></div>
+    </section>
+  </main>
+
+  <footer>&copy; <span id="year"></span> YourProject</footer>
+</div>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
